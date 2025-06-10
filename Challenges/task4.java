@@ -24,9 +24,12 @@ class Student {
 
     String getGrade() {
         double avg = getAverageMarks();
-        if (avg >= 35) return "pass";
-        else if (avg >= 35) return "A";
-        else return "Fail";
+        if (avg >= 35) {
+            return "pass";
+        }    
+        else{ 
+            return "Fail";
+        }    
     }
 
     void displayDetails() {
