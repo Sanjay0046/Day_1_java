@@ -26,8 +26,6 @@ class Student {
         double avg = getAverageMarks();
         if (avg >= 35) return "pass";
         else if (avg >= 35) return "A";
-        else if (avg >= 35) return "B";
-        else if (avg >= 35) return "C";
         else return "Fail";
     }
 
