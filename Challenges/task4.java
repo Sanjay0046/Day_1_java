@@ -32,7 +32,7 @@ class Student {
     }
 
     void displayDetails() {
-        System.out.println("\n--- Student Details ---");
+        System.out.println("--- Student Details ---");
         System.out.println("Name: " + name);
         System.out.println("Subject 1: " + mark1);
         System.out.println("Subject 2: " + mark2);
