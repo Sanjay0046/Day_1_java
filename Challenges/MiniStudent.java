@@ -66,8 +66,8 @@ public class MiniStudent {
 	       } catch (IOException e) {
 		            System.out.println("wrong"+e);
 	       }        
+		    	in.close();
 		 }       
-	    	in.close();
 		}	    
 	}	
  } 
