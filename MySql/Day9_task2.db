@@ -1,0 +1,73 @@
+mysql>  create table student(
+    -> sid int ,
+    ->  sname varchar(40),
+    ->  sdep varchar(40),
+    -> course varchar(40),
+    -> sal int);
+Query OK, 0 rows affected (0.26 sec)
+
+mysql> insert into student
+    -> values
+    -> (1,'Sanjay','ct','java',10000),
+    -> (2,'Surya','ct','java',20000),
+    -> (3,'Sakthi','ct','java',30000),
+    -> (4,'Victor Roy','ct','java',40000),
+    -> (5,'Hrithik Roshan','ct','java',50000),
+    -> (6,'John','ct','java',60000)
+    -> ;
+Query OK, 6 rows affected (0.02 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+
+mysql> select * from student;
++------+----------------+------+------------+-------+
+| sid  | sname          | sdep | course     | sal   |
++------+----------------+------+------------+-------+
+|    1 | Sanjay         | ct   | python     | 10000 |
+|    2 | Surya          | ct   | java       | 20000 |
+|    3 | Sakthi         | ct   | C++        | 30000 |
+|    4 | Victor Roy     | ct   | C          | 40000 |
+|    5 | Hrithik Roshan | ct   | full stack | 50000 |
+|    6 | John           | ct   | JavaScript | 60000 |
++------+----------------+------+------------+-------+
+6 rows in set (0.00 sec)
+
+mysql> alter table student
+    -> add column fees int;
+
+mysql> update student set fees='300000' where sname="sanjay";
+mysql> update student set fees='350000' where sname="surya";
+mysql> update student set fees='200000' where sname="sakthi";
+mysql> update student set fees='200000' where sname="victor roy";
+mysql> update student set fees='325000' where sname="Hrithik Roshan";
+mysql> update student set fees='425000' where sname="john";
+
+mysql> select * from student;
++------+----------------+------+------------+-------+--------+
+| sid  | sname          | sdep | course     | sal   | fees   |
++------+----------------+------+------------+-------+--------+
+|    1 | Sanjay         | ct   | python     | 10000 | 300000 |
+|    2 | Surya          | ct   | java       | 20000 | 350000 |
+|    3 | Sakthi         | ct   | C++        | 30000 | 200000 |
+|    4 | Victor Roy     | ct   | C          | 40000 | 200000 |
+|    5 | Hrithik Roshan | ct   | full stack | 50000 | 325000 |
+|    6 | John           | ct   | JavaScript | 60000 | 425000 |
++------+----------------+------+------------+-------+--------+
+6 rows in set (0.00 sec)
+
+
+mysql>  select course,fees
+    -> from student
+    ->  order by course asc;
++------------+--------+
+| course     | fees   |
++------------+--------+
+| C          | 200000 |
+| C++        | 200000 |
+| full stack | 325000 |
+| java       | 350000 |
+| JavaScript | 425000 |
+| python     | 300000 |
++------------+--------+
+6 rows in set (0.00 sec)
+  
