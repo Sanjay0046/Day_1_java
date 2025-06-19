@@ -55,3 +55,50 @@ from emp1
 |     4 | Sanjay | Developer  | 400000 | 2023-06-20 |
 |     5 | Roshan | Developer  | 400000 | 2023-06-20 |
 +-------+--------+------------+--------+------------+
+
+5 rows in set (0.00 sec)
+--------------
+delete from  emp1
+where  empid=5
+-------------
+mysql> select*from emp1;
+--------------
+select*from emp1
+--------------
+
++-------+--------+------------+--------+------------+
+| empid | name   | dept       | salary | joindate   |
++-------+--------+------------+--------+------------+
+|     1 | Victor | finance    | 100000 | 2023-06-12 |
+|     2 | Sakthi | Developer  | 100000 | 2023-06-06 |
+|     3 | Surya  | technology | 200000 | 2023-06-24 |
+|     4 | Sanjay | Developer  | 400000 | 2023-06-20 |
++-------+--------+------------+--------+------------+
+
+4 rows in set (0.00 sec)
+mysql> select *from emp1 where salary=' 100000'and dept='finance';
+--------------
+ select *from emp1 where salary=' 100000'and dept='finance';
+--------------
+
++-------+--------+------------+--------+------------+
+| empid | name   | dept       | salary | joindate   |
++-------+--------+------------+--------+------------+
+|     1 | Victor | finance    | 100000 | 2023-06-12 |
++-------+--------+------------+--------+------------+
+
+1 row in set (0.00 sec)
+
+mysql> select *from emp1 where dept='Developer'and salary >100000;
+--------------
+select *from emp1 where dept='Developer'and salary >100000
+--------------
++-------+--------+------------+--------+------------+
+| empid | name   | dept       | salary | joindate   |
++-------+--------+------------+--------+------------+
+|     2 | Sakthi | Developer  | 100000 | 2023-06-06 |
+|     4 | Sanjay | Developer  | 400000 | 2023-06-20 |
++-------+--------+------------+--------+------------+
+
+1 row in set (0.00 sec)
+
