@@ -89,9 +89,9 @@ mysql> select *from emp1 where salary=' 100000'and dept='finance';
 
 1 row in set (0.00 sec)
 
-mysql> select *from emp1 where dept='Developer'and salary >100000;
+mysql> select *from emp1 where dept='Developer'and salary >10000;
 --------------
-select *from emp1 where dept='Developer'and salary >100000
+select *from emp1 where dept='Developer'and salary >10000
 --------------
 +-------+--------+------------+--------+------------+
 | empid | name   | dept       | salary | joindate   |
