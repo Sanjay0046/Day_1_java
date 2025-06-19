@@ -1,0 +1,47 @@
+mysql> create table sale(
+    -> sno int,
+    -> prodname varchar(40),
+    -> prodprice int
+    -> );
+
+mysql> insert into sale values
+    -> (1,'apple',20),
+    -> (2,'mango',30),
+    -> (3,'orange',50),
+    -> (4,'water melon',60),
+    -> (5,'banana',10),
+    -> (6,'lemon',05),
+    -> (7,'dragon fruit',55)
+    -> ;
+
+mysql> select *from sale;
++------+--------------+-----------+
+| sno  | prodname     | prodprice |
++------+--------------+-----------+
+|    1 | apple        |        20 |
+|    2 | mango        |        30 |
+|    3 | orange       |        50 |
+|    4 | water melon  |        60 |
+|    5 | banana       |        10 |
+|    6 | lemon        |         5 |
+|    7 | dragon fruit |        55 |
++------+--------------+-----------+
+7 rows in set (0.00 sec)
+
+mysql>  select min(prodprice) as minimumprodname
+    ->   from sale;
++-----------------+
+| minimumprodname |
++-----------------+
+|               5 |
++-----------------+
+1 row in set (0.01 sec)
+
+mysql>  select max(prodprice) as maximumprodname
+    ->   from sale;
++-----------------+
+| maximumprodname |
++-----------------+
+|              60 |
++-----------------+
+1 row in set (0.00 sec)
